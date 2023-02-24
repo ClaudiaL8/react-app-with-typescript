@@ -4,8 +4,6 @@ import List from "./components/List";
 import Form from "./components/Form";
 import { Sub } from "./types";
 
-//contrato que tiene que tener un objeto o una clase
-
 interface AppState {
   subs: Array<Sub>;
   newSubsNumber: number;
@@ -26,9 +24,6 @@ const INITIAL_STATE = [
 ];
 
 function App() {
-  //el useState lo que va a ser es un array de Sub <Array<Sub>>. Se inicializa con un array vacío pero en cuanto lo rellene
-  //será con el con un array que coincide con el contrato
-  //<Array<Sub>> === Sub
   const [subs, setSubs] = useState<AppState["subs"]>([]);
   const [newSubsNumber, setNewSubsNumber] =
     useState<AppState["newSubsNumber"]>(0);

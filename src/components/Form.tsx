@@ -6,9 +6,6 @@ interface FormProps {
 }
 
 const Form = ({ onNewSub }: FormProps) => {
-  //   const [inputValues, setInputValues] =
-  //     useState<FormState["inputValues"]>(INITIAL_STATE);
-
   const [inputValues, dispatch] = useNewSubForm();
 
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
@@ -27,15 +24,10 @@ const Form = ({ onNewSub }: FormProps) => {
         inputValue: value,
       },
     });
-    // setInputValues({
-    //   ...inputValues,
-    //   [evt.target.name]: evt.target.value,
-    // });
   };
 
   const handleClear = () => {
     dispatch({ type: "clear" });
-    // setInputValues(INITIAL_STATE);
   };
 
   return (

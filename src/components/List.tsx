@@ -1,13 +1,9 @@
 import { Sub } from "../types";
 
-//El tipo de las props
 interface Props {
-  //en caso de que quieras mandar un children
-  // children: string;
   subs: Array<Sub>;
 }
 
-//({ subs }: Props) === (props: Props) const {subs} = props
 export default function List({ subs }: Props) {
   return (
     <ul>
