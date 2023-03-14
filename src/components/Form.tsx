@@ -13,6 +13,7 @@ const Form = ({ onNewSub }: FormProps) => {
     onNewSub(inputValues);
     dispatch({ type: "clear" });
   };
+
   const handleChange = (
     evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
